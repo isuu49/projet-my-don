@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Rubik+Dirt&display=swap');
+
+/*******************************************************************************************************************
+*************************************************** RESET *********************************************************
+********************************************************************************************************************/
+
+body,
+figure,
+img,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*******************************************************************************************************************
+*************************************************** GENERAL *********************************************************
+********************************************************************************************************************/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.8rem;
+    font-family: 'Ancizar Sans', sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Rubik Dirt', system-ui;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h2::before {
+    content: "\f004";
+    color: #950000;
+    font-family: 'FontAwesome';
+    font-size: 1rem;
+    padding-right: 2rem;
+    position: relative;
+    top: -5px;
+}
+
+h2::after {
+    content: "\f004";
+    color: #950000;
+    font-family: 'FontAwesome';
+    font-size: 1rem;
+    padding-left: 2rem;
+    position: relative;
+    top: -5px;
+}
+
+a {
+    color: black;
+}
+
+/*******************************************************************************************************************
+*************************************************** HEADER *********************************************************
+********************************************************************************************************************/
+
+header {
+    text-align: center;
+    margin-left: 2rem;
+}
+
+.logo {
+    max-width: 60%;
+    margin: 2rem auto 0.5rem auto;
+}
+
+#burger {
+    display: block;
+    cursor: pointer;
+    text-align: left;
+}
+
+#burger:before {
+    content: "\2630";
+}
+
+.nav-links {
+    display: none;
+}
+
+.burger-active #burger:before {
+    content: "\2715";
+}
+
+.burger-active #burger{
+    width: 20rem;
+    background-color: #8a8a8a86;
+}
+
+.burger-active ul {
+    display: flex;
+    flex-direction: column;
+    position : fixed;
+    transition: 0.25s;
+    background-color: #8a8a8a86;
+    width: 20rem;
+    z-index: 100;
+}
+
+.burger-active li {
+    line-height: 3;
+    font-size: 3.5rem;
+    border-bottom: 1px solid #4c4343c5;
+}
+
+nav a {
+    font-weight: 600;
+}
+
+.active a {
+    color: #950000;
+}
+
+nav li:hover {
+    border-bottom: 2px dashed #950000;
+}
+
+/*********************************************
+TABLETTE VERSION 
+*********************************************/
+@media screen and (min-width:780px) {
+    header {
+        max-width: 100%;
+    }
+
+    nav {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* pour annuler le burger ouvert en cas de modification de résolution sur le même écran */
+    .burger-active ul{
+        flex-direction: row;
+        position: relative;
+        justify-content: space-between;
+        background-color: transparent;
+    }
+
+    .nav-links li {
+        padding: 5px 10px 5px 10px;
+        line-height : 1.5;
+        font-size: 2.5rem;
+        border: none;
+    }
+}
+
+/*********************************************
+DESKTOP VERSION 
+*********************************************/
+@media screen and (min-width: 1100px) {
+    header {
+        max-width: 1300px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        gap: 3rem;
+    }
+
+    .nav-links li {
+        padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    }
+}
+
+/*******************************************************************************************************************
+*************************************************** MAIN *********************************************************
+********************************************************************************************************************/
+.main {
+    max-width: 1400px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.main article{
+    margin: auto;
+    text-align: center;
+}
+
+iframe{
+    display: block;
+    margin: auto;
+}
+
+/*******************************************************************************************************************
+*************************************************** FOOTER *********************************************************
+********************************************************************************************************************/
+
+footer {
+    text-align: center;
+    background-color: #950000;
+    color: white;
+}
+
+footer h4 {
+    border-bottom: 2px ridge white;
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+footer li,
+footer p {
+    font-size: 1.6rem;
+}
+
+footer li {
+    padding: 0 1rem 1rem 1rem;
+}
+
+.contact p {
+    line-height: 0.5;
+}
+
+footer a,
+footer a:hover,
+footer a:visited {
+    color: white;
+}
+
+.network ul {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.icon li {
+    font-size: 2rem;
+    margin: 1rem 0.5rem;
+    margin-bottom: 2.5rem;
+}
+
+/*********************************************  
+TABLETTE AND DESKTOP VERSION
+*********************************************/
+@media screen and (min-width: 780px) {
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        justify-content: center;
+    }
+
+    footer article {
+        width: 25%;
+    }
+}

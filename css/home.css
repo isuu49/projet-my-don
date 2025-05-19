@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Rubik+Dirt&display=swap');
+
+/*******************************************************************************************************************
+*************************************************** RESET *********************************************************
+********************************************************************************************************************/
+
+body,
+figure,
+img,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*******************************************************************************************************************
+*************************************************** GENERAL *********************************************************
+********************************************************************************************************************/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.8rem;
+    font-family: 'Ancizar Sans', sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Rubik Dirt', system-ui;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h2::before {
+    content: "\f004";
+    color: #950000;
+    font-family: 'FontAwesome';
+    font-size: 1rem;
+    padding-right: 2rem;
+    position: relative;
+    top: -5px;
+}
+
+h2::after {
+    content: "\f004";
+    color: #950000;
+    font-family: 'FontAwesome';
+    font-size: 1rem;
+    padding-left: 2rem;
+    position: relative;
+    top: -5px;
+}
+
+a {
+    color: black;
+}
+
+/*******************************************************************************************************************
+*************************************************** HEADER *********************************************************
+********************************************************************************************************************/
+
+header {
+    text-align: center;
+    margin-left: 2rem;
+}
+
+.logo {
+    max-width: 60%;
+    margin: 2rem auto 0.5rem auto;
+}
+
+#burger {
+    display: block;
+    cursor: pointer;
+    text-align: left;
+}
+
+#burger:before {
+    content: "\2630";
+}
+
+.nav-links {
+    display: none;
+}
+
+.burger-active #burger:before {
+    content: "\2715";
+}
+
+.burger-active #burger{
+    width: 20rem;
+    background-color: #8a8a8a86;
+}
+
+.burger-active ul {
+    display: flex;
+    flex-direction: column;
+    position : fixed;
+    transition: 0.25s;
+    background-color: #8a8a8a86;
+    width: 20rem;
+    z-index: 100;
+}
+
+.burger-active li {
+    line-height: 3;
+    font-size: 3.5rem;
+    border-bottom: 1px solid #4c4343c5;
+}
+
+nav a {
+    font-weight: 600;
+}
+
+.active a {
+    color: #950000;
+}
+
+nav li:hover {
+    border-bottom: 2px dashed #950000;
+}
+
+/*********************************************
+TABLETTE VERSION 
+*********************************************/
+@media screen and (min-width:780px) {
+    header {
+        max-width: 100%;
+    }
+
+    nav {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* pour annuler le burger ouvert en cas de modification de résolution sur le même écran */
+    .burger-active ul{
+        flex-direction: row;
+        position: relative;
+        justify-content: space-between;
+        background-color: transparent;
+    }
+
+    .nav-links li {
+        padding: 5px 10px 5px 10px;
+        line-height : 1.5;
+        font-size: 2.5rem;
+        border: none;
+    }
+}
+
+/*********************************************
+DESKTOP VERSION 
+*********************************************/
+@media screen and (min-width: 1100px) {
+    header {
+        max-width: 1300px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        gap: 3rem;
+    }
+
+    .nav-links li {
+        padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    }
+}
+
+/*******************************************************************************************************************
+*************************************************** MAIN *********************************************************
+********************************************************************************************************************/
+.main {
+    max-width: 1400px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.slider img{
+    width: 100%;
+}
+
+.slick-prev {
+    left: 10px;
+    z-index: 9999;
+}
+
+.slick-prev::before {
+    content: '\f137';
+    font-family: 'FontAwesome';
+}
+
+.slick-next {
+    right: 10px;
+    z-index: 9999;
+}
+
+.slick-next::before {
+    content: '\f138';
+    font-family: 'FontAwesome';
+}
+
+.slick-dots li button::before {
+    font-size: 30px;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #950000;
+}
+
+article {
+    padding: 0.5rem 0 0.5rem 0;
+    margin-bottom: 2rem;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  /* width: 180px; */
+  background-color: #8a8a8a86;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  padding: 5px 3px;
+  border-radius: 6px;
+ 
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;  /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #8a8a8a86 transparent;
+}
+
+.introduction:hover .tooltiptext {
+  visibility: visible;
+}
+
+.specialty figure {
+    /* pour que le hover fonctionne sur figcaption */
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.specialty img {
+    height: 400px;
+    width: 100%;
+}
+
+.specialty figcaption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(76, 67, 67, 0);
+    color: transparent;
+    font-style: italic;
+    font-family: 'Athiti';
+    font-weight: 500;
+    font-size: 2rem;
+    box-sizing: border-box;
+    padding: 2rem;
+}
+
+.specialty figcaption div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid transparent;
+    padding: auto;
+    height: 95%;
+    width: 100%;
+}
+
+.price {
+    font-size: 5rem;
+    font-style: normal;
+}
+
+.specialty figcaption:hover {
+    background-color: rgba(76, 67, 67, .9);
+    color: white;
+}
+
+.specialty article li {
+    border-bottom: 1px dashed #4c4343;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    font-size: 1.5rem;
+}
+
+.specialty li::before {
+    content: "\e4c6";
+    color: #950000;
+    font-family: 'FontAwesome';
+    font-size: 1rem;
+    padding-right: 1rem;
+}
+
+.plus-button {
+    border: 2px solid #4c4343;
+    border-bottom: 4px solid #4c4343;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.plus-button:hover {
+    background-color: #950000;
+    border: none;
+}
+
+.plus-button a:hover {
+    color: white;
+    font-weight: bold;
+}
+
+/*********************************************
+TABLETTE VERSION 
+*********************************************/
+@media screen and (min-width: 780px) {
+    .slider img {
+        max-height : 640px;
+    }
+
+    .specialty figure{
+        margin: auto;
+    }
+}
+
+/*********************************************
+DESKTOP VERSION 
+*********************************************/
+@media screen and (min-width: 1100px) {
+    .welcome {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .welcome h1 {
+        width: 100%;
+        align-items: center;
+    }
+
+    .float-right p {
+        margin-top: 0;
+    }
+
+    .float-right figure {
+        width: 40%;
+        float: right;
+        margin-left: 1rem;
+    }
+
+    .specialty {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+
+    h2 {
+        width: 100%;
+    }
+
+    .specialty article {
+        width: 32%;
+    }
+
+}
+
+/*******************************************************************************************************************
+*************************************************** FOOTER *********************************************************
+********************************************************************************************************************/
+
+footer {
+    text-align: center;
+    background-color: #950000;
+    color: white;
+}
+
+footer h4 {
+    border-bottom: 2px ridge white;
+    width: 90%;
+    margin: auto;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+footer li,
+footer p {
+    font-size: 1.6rem;
+}
+
+footer li {
+    padding: 0 1rem 1rem 1rem;
+}
+
+.contact p {
+    line-height: 0.5;
+}
+
+footer a,
+footer a:hover,
+footer a:visited {
+    color: white;
+}
+
+.network ul {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.icon li {
+    font-size: 2rem;
+    margin: 1rem 0.5rem;
+    margin-bottom: 2.5rem;
+}
+
+/*********************************************  
+TABLETTE AND DESKTOP VERSION
+*********************************************/
+@media screen and (min-width: 780px) {
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        justify-content: center;
+    }
+
+    footer article {
+        width: 25%;
+    }
+}

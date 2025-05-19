@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Don Restaurant : Menu</title>
+    <script src="https://kit.fontawesome.com/f806f0948f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/menu.css" />
+</head>
+
+<body>
+    <header>
+        <figure class="logo">
+            <img src="ressources/images/logo.jpg" alt="Logo My Don Restaurant">
+        </figure>
+        <nav class="nav">
+            <div id="burger"></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="active"><a href="menu.html">Menus</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <h1>Our menu</h1>
+        <p class="subtitle">Check out what you'll eat !</p>
+        <section class="menu">
+            <article class="dish mixitup">
+                <h2>Dishes</h2>
+                <p class="subtitle">Try our ramen, bento or katsudon !</p>
+                <div class="filter">
+                    <button data-filter="all">Dishes</button>
+                    <button data-filter=".meat">meat</button>
+                    <button data-filter=".vegan">vegan</button>
+                    <button data-filter=".fish">fish</button>
+                    <button><a href="#desert">Deserts</a></button>
+                    <button><a href="#special-drink">Drinks</a></button>
+                </div>
+                <div class="pic">
+                    <figure class="mix meat">
+                        <img src="ressources/images/ramen-pork-desert-stephen.jpg"
+                            alt="picture of ramen with pork and a desert">
+                        <figcaption>
+                            Ramen with pork (desert not included)
+                            <span class="credit">Photo de Stephen Bedase sur Unsplash</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="mix meat">
+                        <img src="ressources/images/ramen-pork-ravioli-frank.jpg" alt="picture of ramen with ravioli">
+                        <figcaption>
+                            Ramen with ravioli
+                            <span class="credit"> Photo de Frank from 5 AM Ramen sur Unsplash</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="mix fish">
+                        <img src="ressources/images/ramen-prawns-michelle.jpg" alt="picture of ramen with prawns">
+                        <figcaption>
+                            Ramen with prawns
+                            <span class="credit">Photo de Michell Blackwell sur Unsplash</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="mix vegan">
+                        <img src="ressources/images/ramen-soja-zoshua.jpg" alt="picture of ramen with soja">
+                        <figcaption>
+                            Ramen with soja
+                            <span class="credit">Photo de Zoshua Colah sur Unsplash</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="mix meat">
+                        <img src="ressources/images/ramen-with-eggs.jpg" alt="picture of ramen with eggs">
+                        <figcaption>
+                            Ramen with eggs
+                        </figcaption>
+                    </figure>
+                    <figure class="mix meat">
+                        <img src="ressources/images/shirasudon.jpg" alt="picture of shirasudon">
+                        <figcaption>
+                            Shirasudon
+                        </figcaption>
+                    </figure>
+                    <figure class="mix meat">
+                        <img src="ressources/images/bento.jpg" alt="picture of bento with chicken">
+                        <figcaption>
+                            Bento with chicken
+                        </figcaption>
+                    </figure>
+                    <figure class="mix meat">
+                        <img src="ressources/images/cold-ramen.jpg" alt="picture of cold ramen vegan">
+                        <figcaption>
+                            Cold ramen (vegan)
+                        </figcaption>
+                    </figure>
+                    <figure class="mix meat">
+                        <img src="ressources/images/tonkotsu.jpg" alt="picture of tonkotsu">
+                        <figcaption>
+                            Tonkotsu
+                        </figcaption>
+                    </figure>
+                    <figure class="mix vegan">
+                        <img src="ressources/images/tsukemen.jpg" alt="picture of tsukemen">
+                        <figcaption>
+                            Tsukemen
+                        </figcaption>
+                    </figure>
+                    <figure class="mix meat">
+                        <img src="ressources/images/katsudon.jpg" alt="picture of katsudon">
+                        <figcaption>
+                            Katsudon
+                        </figcaption>
+                    </figure>
+                </div>
+            </article>
+            <article class="desert" id="desert">
+                <h2>Deserts</h2>
+                <p class="subtitle"> Here are the desserts you can choose to finish your meal</p>
+                <div>
+                    <figure>
+                        <img src="ressources/images/desert-mochi-backie.jpg" alt="picture of mochi">
+                        <figcaption>
+                            Mochi
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="ressources/images/desert-pudding-note.jpg" alt="picture of japanese pudding">
+                        <figcaption>
+                            Japanese pudding
+                            <span class="credit">Photo de Note Thanun sur Unsplash</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="ressources/images/desert-rice-flour-jackie.jpg"
+                            alt="picture of 4 colored small cakes with rice flour">
+                        <figcaption>
+                            Small cakes with rice flour
+                            <span class="credit">Photo de Jackie Hu sur Unsplash</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </article>
+            <article class="special-drink" id="special-drink">
+                <h2>Special drinks</h2>
+                <p class="subtitle">Soft drinks are included (water, juice, syrup), but you can change with wine or
+                    mocktails for extra.</p>
+                <div>
+                    <figure>
+                        <img src="ressources/images/vin-blanc-anastasiia.jpg" alt="picture of white wine glass">
+                        <figcaption>
+                            Sauvignon blanc (white wine)
+                            <span class="credit">Photo de Anastasiia Rozumna sur Unsplash</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="ressources/images/vin-rouge-jeff.jpg" alt="picture of red wine glass">
+                        <figcaption>
+                            Côte du Rhône (red wine)
+                            <span class="credit">Photo de Jeff Siepman sur Unsplash</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="ressources/images/mocktail-sama.jpg" alt="picture of 3 three-color mocktails">
+                        <figcaption>
+                            Mocktails
+                            <span class="credit">Photo de Sama Hosseini sur Unsplash</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <article class="opening">
+            <h4>Opening hours</h4>
+            <ul>
+                <li>Monday: Closed</li>
+                <li>Tue-Wed : 9am - 10pm</li>
+                <li>Thu-Fri : 9am - 10pm</li>
+                <li>Sat-Sun : 5pm - 10pm</li>
+            </ul>
+        </article>
+
+        <article class="contact">
+            <h4>Contact</h4>
+            <p>Bv Ayrault</p>
+            <p>49100 Angers</p>
+            <p>+33 1 24 35 68 97</p>
+        </article>
+
+        <article class="network">
+            <h4>Social networks</h4>
+            <ul class="icon">
+                <li>
+                    <a href="https://fr-fr.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+            </ul>
+        </article>
+    </footer>
+    <script type="text/javascript" src="js/burger.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script>
+        let mixer = mixitup(".mixitup");
+    </script>
+</body>
+
+</html>
